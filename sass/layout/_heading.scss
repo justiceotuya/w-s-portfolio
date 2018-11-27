@@ -1,0 +1,21 @@
+.heading {
+    &__email {
+        margin-bottom: 15.6rem;
+        @include clearfix;
+
+        &--text {
+            float: right;
+        }
+    }
+
+    &__large {
+        margin: 0 auto;
+        text-align: center;
+        // margin-bottom: 12rem;
+
+        & span {
+            display: block;
+        }
+
+    }
+}

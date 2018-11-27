@@ -1,0 +1,11 @@
+.section-portfolio {
+    & img:hover {
+        transform: scale(1.05) translateY(-.05rem);
+        transition: all .2s;
+    }
+
+    & img:hover :not(:hover) {
+        transform: scale(.95)
+    }
+
+}

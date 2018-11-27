@@ -1,0 +1,108 @@
+.row {
+    max-width: $grid-width;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+        margin-bottom: $grid-gutter-vertical;
+    }
+}
+
+@include clearfix;
+
+[class^='col-'] {
+    float: left;
+
+    &:not(:last-child) {
+        margin-right: $grid-gutter-horizontal;
+    }
+}
+
+.col-1-of-2 {
+    width: calc((100% - #{$grid-gutter-horizontal})/2);
+    float: left;
+
+    &:not(:last-child) {
+        margin-right: $grid-gutter-horizontal;
+    }
+
+    // width: 40%;
+
+    // &:nth-of-type(2n) {
+    //     width: 100%
+    // }
+
+
+}
+
+.col-1-of-3 {
+    width: calc((100% - (2 * #{$grid-gutter-horizontal}))/3);
+}
+
+.footer__soc-media {
+    width: 27.8rem;
+    margin: 9.2rem auto 7.8rem auto;
+
+    & img {
+        width: 4.2rem;
+        height: 4.2rem;
+    }
+}
+
+.col-1-of-5 {
+    width: calc((100% - (4 * #{$grid-gutter-horizontal}))/5);
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+
+    & img {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+
+
+    }
+}
+
+.col-1-of-6 {
+    width: calc((100% - (5 * #{$grid-gutter-horizontal}))/6);
+    text-align: center;
+    position: relative;
+
+    & img {
+        width: 100%;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+
+
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .row:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    .col-1 {
+        width: 100%;
+    }
+
+    .col-1-of-2 {
+        // width: 50%;
+        text-align: center;
+        position: relative;
+        // width: 16.5rem;
+        height: 11.2rem;
+
+        & img {
+            width: 50%;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+
+
+        }
+    }
+
+}
